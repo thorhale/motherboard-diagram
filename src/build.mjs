@@ -266,7 +266,7 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
 .masthead h1{font-size:25pt;line-height:.98;letter-spacing:-.005em}
 .masthead h1 em{font-style:normal;color:var(--gold)}
 .mh-dek{margin:2px 0 0;font-size:9.4pt;color:var(--ink-2);max-width:74ch}
-.tblock{display:grid;grid-template-columns:repeat(4,auto);gap:0;border:1px solid var(--ink);flex:0 0 auto;align-self:flex-end}
+.tblock{display:grid;grid-template-columns:repeat(6,auto);gap:0;border:1px solid var(--ink);flex:0 0 auto;align-self:flex-end}
 .tblock div{padding:3px 9px 4px;border-right:1px solid var(--rule)}
 .tblock div:last-child{border-right:0}
 .tblock dt{font-family:"IBM Plex Mono",monospace;font-size:6.2pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0}
@@ -377,6 +377,8 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
       <p class="mh-dek">${D.meta.subtitle}. Every part below does one job in the chain that turns wall power into a running operating system. The seven required components are numbered in gold; six additional components are numbered in copper.</p>
     </div>
     <dl class="tblock">
+      <div><dt>Prepared by</dt><dd>${D.meta.author}</dd></div>
+      <div><dt>Course</dt><dd>${D.meta.course}</dd></div>
       <div><dt>Plate</dt><dd>1 of 3</dd></div>
       <div><dt>View</dt><dd>Top · 1:1</dd></div>
       <div><dt>Rev</dt><dd>1.0</dd></div>
@@ -409,7 +411,7 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
   </div>
 
   <div class="foot">
-    <span>${D.meta.title} · Plate 1 · Component map</span>
+    <span>${D.meta.author} · ${D.meta.course} · Plate 1 · Component map</span>
     <span class="key">
       <span><i class="g"></i>Required components 1–7</span>
       <span><i class="c"></i>Additional components 8–13</span>
@@ -427,6 +429,8 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
       <p class="mh-dek">What each part does, and how it contributes to the overall operation of the computer.</p>
     </div>
     <dl class="tblock">
+      <div><dt>Prepared by</dt><dd>${D.meta.author}</dd></div>
+      <div><dt>Course</dt><dd>${D.meta.course}</dd></div>
       <div><dt>Plate</dt><dd>2 of 3</dd></div>
       <div><dt>Items</dt><dd>1 – 7</dd></div>
       <div><dt>Rev</dt><dd>1.0</dd></div>
@@ -448,7 +452,7 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
     </div>
   </div>
   <div class="foot">
-    <span>${D.meta.title} · Plate 2 · Required components 1–7</span>
+    <span>${D.meta.author} · ${D.meta.course} · Plate 2 · Required components 1–7</span>
     <span class="key"><span><i class="g"></i>Required components 1–7</span></span>
     <span>Page 2 of 3</span>
   </div>
@@ -463,6 +467,8 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
       <p class="mh-dek">Parts beyond the required seven that a modern ATX board depends on, with the same accuracy standard applied.</p>
     </div>
     <dl class="tblock">
+      <div><dt>Prepared by</dt><dd>${D.meta.author}</dd></div>
+      <div><dt>Course</dt><dd>${D.meta.course}</dd></div>
       <div><dt>Plate</dt><dd>3 of 3</dd></div>
       <div><dt>Items</dt><dd>8 – 13</dd></div>
       <div><dt>Rev</dt><dd>1.0</dd></div>
@@ -494,7 +500,7 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
     </div>
   </div>
   <div class="foot">
-    <span>${D.meta.title} · Plate 3 · Additional components 8–13</span>
+    <span>${D.meta.author} · ${D.meta.course} · Plate 3 · Additional components 8–13</span>
     <span class="key"><span><i class="c"></i>Additional components 8–13</span></span>
     <span>Page 3 of 3</span>
   </div>

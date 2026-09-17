@@ -5,7 +5,9 @@
     "form": "ATX form factor · 305 × 244 mm · 9 mounting standoffs",
     "plate": "PLATE 1 OF 3",
     "rev": "REV 1.0",
-    "scale": "TOP VIEW · 1:1 PROPORTIONS"
+    "scale": "TOP VIEW · 1:1 PROPORTIONS",
+    "author": "Travis Hoggatt",
+    "course": "BPC170 12820"
   },
   "components": [
     {

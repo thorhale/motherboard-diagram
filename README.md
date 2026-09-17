@@ -2,6 +2,8 @@
 
 Submission for **Exercise: Motherboard Diagram Creation**.
 
+Live version: **https://claude.ai/artifact/B3sf5A9M8Nsc1qMdWwymH7**
+
 `build/Motherboard-Diagram.pdf` is the deliverable — three tabloid-landscape
 plates (17 × 11 in), vector throughout, with all nine font faces embedded. It
 opens correctly with no network access.
@@ -33,3 +35,4 @@ node src/render.mjs     # -> build/Motherboard-Diagram.pdf + proof images
 - `src/data.json` — component text, leader anchors, badge positions
 - `src/_art.svg`, `src/_defs.svg` — board artwork
 - `assets/fonts.css` — base64-embedded latin subsets, so nothing is fetched at open time
+- `src/artifact.mjs` — recasts the print build as a screen artifact (scales the 17in deck to the viewport)

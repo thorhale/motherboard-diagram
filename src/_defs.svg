@@ -1,0 +1,105 @@
+<defs>
+  <linearGradient id="pcb" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#14432F"/><stop offset=".45" stop-color="#0E3324"/>
+    <stop offset=".78" stop-color="#0B2B1F"/><stop offset="1" stop-color="#082019"/>
+  </linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#F5E1A8"/><stop offset=".35" stop-color="#D9AF52"/>
+    <stop offset=".62" stop-color="#A87C28"/><stop offset="1" stop-color="#E3C577"/>
+  </linearGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#F0F3F5"/><stop offset=".3" stop-color="#AEB7BC"/>
+    <stop offset=".55" stop-color="#767F85"/><stop offset=".78" stop-color="#C3CACE"/>
+    <stop offset="1" stop-color="#8A9298"/>
+  </linearGradient>
+  <linearGradient id="alum" x1="0" y1="0" x2=".25" y2="1">
+    <stop offset="0" stop-color="#D2D9DD"/><stop offset=".32" stop-color="#98A2A8"/>
+    <stop offset=".58" stop-color="#B9C2C7"/><stop offset=".8" stop-color="#79838A"/>
+    <stop offset="1" stop-color="#A6B0B6"/>
+  </linearGradient>
+  <linearGradient id="blk" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3B4240"/><stop offset=".18" stop-color="#232927"/>
+    <stop offset=".85" stop-color="#0E1211"/><stop offset="1" stop-color="#1A201E"/>
+  </linearGradient>
+  <linearGradient id="blk2" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#343A38"/><stop offset=".2" stop-color="#191E1D"/>
+    <stop offset=".8" stop-color="#121615"/><stop offset="1" stop-color="#2B3230"/>
+  </linearGradient>
+  <linearGradient id="navy" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2E4F86"/><stop offset=".5" stop-color="#1B3560"/><stop offset="1" stop-color="#122542"/>
+  </linearGradient>
+  <linearGradient id="white" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#F4F6F3"/><stop offset=".5" stop-color="#CDD3CD"/><stop offset="1" stop-color="#9DA6A0"/>
+  </linearGradient>
+  <radialGradient id="coin" cx=".36" cy=".3" r=".85">
+    <stop offset="0" stop-color="#FBFDFE"/><stop offset=".38" stop-color="#D3DADE"/>
+    <stop offset=".72" stop-color="#98A2A8"/><stop offset="1" stop-color="#C6CED3"/>
+  </radialGradient>
+  <radialGradient id="captop" cx=".38" cy=".32" r=".8">
+    <stop offset="0" stop-color="#4C5350"/><stop offset=".6" stop-color="#222725"/><stop offset="1" stop-color="#0D100F"/>
+  </radialGradient>
+  <linearGradient id="ring2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#5A6360"/><stop offset="1" stop-color="#1D2321"/>
+  </linearGradient>
+  <filter id="grain" x="-2%" y="-2%" width="104%" height="104%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="11" result="n"/>
+    <feColorMatrix in="n" type="saturate" values="0"/>
+  </filter>
+  <filter id="lift" x="-30%" y="-30%" width="170%" height="180%">
+    <feDropShadow dx="1.5" dy="4" stdDeviation="3.5" flood-color="#000" flood-opacity=".62"/>
+  </filter>
+  <filter id="lift2" x="-30%" y="-30%" width="170%" height="180%">
+    <feDropShadow dx="1" dy="2" stdDeviation="1.6" flood-color="#000" flood-opacity=".55"/>
+  </filter>
+  <pattern id="lga" width="7.5" height="7.5" patternUnits="userSpaceOnUse">
+    <rect width="7.5" height="7.5" fill="#171C1A"/>
+    <circle cx="3.75" cy="3.75" r="2.1" fill="#C6A24E"/>
+  </pattern>
+  <pattern id="pads" width="7.5" height="7.5" patternUnits="userSpaceOnUse">
+    <rect width="7.5" height="7.5" fill="#191E1C"/>
+    <circle cx="3.75" cy="3.75" r="2.05" fill="#C9A652"/>
+  </pattern>
+  <pattern id="brush" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(90)">
+    <rect width="6" height="6" fill="none"/>
+    <line x1="0" y1="0" x2="0" y2="6" stroke="#fff" stroke-opacity=".13" stroke-width="1.4"/>
+    <line x1="3" y1="0" x2="3" y2="6" stroke="#000" stroke-opacity=".16" stroke-width="1.2"/>
+  </pattern>
+  <pattern id="dimmpin" width="6.2" height="10" patternUnits="userSpaceOnUse">
+    <rect width="6.2" height="10" fill="#0B0F0D"/>
+    <rect x="1.3" y="0" width="3.2" height="10" fill="url(#gold)"/>
+  </pattern>
+  <pattern id="pciepin" width="6.6" height="12" patternUnits="userSpaceOnUse">
+    <rect width="6.6" height="12" fill="#0A0D0C"/>
+    <rect x="1.4" y="0" width="3.4" height="12" fill="url(#gold)"/>
+  </pattern>
+  <symbol id="choke" viewBox="0 0 40 40">
+    <rect x="1" y="1" width="38" height="38" rx="4" fill="#0B0E0D"/>
+    <rect x="3" y="3" width="34" height="34" rx="3" fill="url(#blk2)"/>
+    <rect x="7" y="7" width="26" height="26" rx="2" fill="#222826" opacity=".9"/>
+    <rect x="7" y="7" width="26" height="9" rx="2" fill="#3A423F" opacity=".55"/>
+    <rect x="4" y="30" width="32" height="6" rx="1.5" fill="#6E7671" opacity=".5"/>
+  </symbol>
+  <symbol id="cap" viewBox="0 0 30 30">
+    <circle cx="15" cy="15" r="14" fill="url(#ring2)"/>
+    <circle cx="15" cy="15" r="11.5" fill="url(#captop)"/>
+    <path d="M15 5.5V24.5M5.5 15H24.5" stroke="#5C6663" stroke-width="1.6" opacity=".75"/>
+    <circle cx="15" cy="15" r="11.5" fill="none" stroke="#000" stroke-opacity=".5"/>
+  </symbol>
+  <symbol id="mos" viewBox="0 0 26 18">
+    <rect x="0" y="0" width="26" height="18" rx="1.5" fill="#181D1B"/>
+    <rect x="1.5" y="1.5" width="23" height="13" rx="1" fill="#2C3331"/>
+    <rect x="1.5" y="15" width="23" height="3" fill="#8D9691" opacity=".6"/>
+  </symbol>
+  <symbol id="fanhdr" viewBox="0 0 46 28">
+    <rect x="0" y="0" width="46" height="28" rx="2" fill="#0C100E"/>
+    <rect x="1.5" y="1.5" width="43" height="25" rx="1.5" fill="url(#blk)"/>
+    <rect x="1.5" y="1.5" width="43" height="6" fill="#454C49" opacity=".45"/>
+    <g fill="#C9B37A"><rect x="6" y="10" width="4" height="12"/><rect x="16" y="10" width="4" height="12"/><rect x="26" y="10" width="4" height="12"/><rect x="36" y="10" width="4" height="12"/></g>
+  </symbol>
+  <mask id="spotmask">
+    <rect x="0" y="0" width="1700" height="1180" fill="#fff"/>
+    <rect id="h0" x="0" y="0" width="0" height="0" rx="10" fill="#000"/>
+    <rect id="h1" x="0" y="0" width="0" height="0" rx="10" fill="#000"/>
+    <rect id="h2" x="0" y="0" width="0" height="0" rx="10" fill="#000"/>
+  </mask>
+</defs>

@@ -1,0 +1,429 @@
+{
+  "meta": {
+    "title": "Anatomy of an ATX Motherboard",
+    "subtitle": "A labeled component map of a modern LGA 1851 / Z890 desktop mainboard",
+    "form": "ATX form factor · 305 × 244 mm · 9 mounting standoffs",
+    "plate": "PLATE 1 OF 3",
+    "rev": "REV 1.0",
+    "scale": "TOP VIEW · 1:1 PROPORTIONS"
+  },
+  "components": [
+    {
+      "n": 1,
+      "id": "cpu",
+      "cat": "core",
+      "col": "L",
+      "ord": 3,
+      "name": "CPU Socket",
+      "spec": "LGA 1851 · land grid array",
+      "anchor": [
+        592,
+        470
+      ],
+      "brief": "Holds the processor and wires it into everything else. All the machine's actual computing happens in the chip clamped into this grid, and its power, memory bus and PCIe lanes all leave through these 1,851 contacts.",
+      "fn": "In a land grid array the springy contacts live in the <b>socket</b> and the CPU carries flat gold pads. A hinged load plate and lever clamp the chip down with enough force that all 1,851 contacts seat at once. Power delivery, the memory bus and the CPU's own PCIe lanes all exit the processor through this grid.",
+      "note": "The socket — not the brand on the box — decides which CPUs fit. Bend one of those spring contacts and the board is scrap; the CPU itself is usually fine.",
+      "chips": [
+        "1,851 spring contacts",
+        "LGA, not PGA",
+        "CPU PCIe lanes exit here"
+      ],
+      "badges": [
+        [
+          701,
+          374
+        ]
+      ]
+    },
+    {
+      "n": 2,
+      "id": "ram",
+      "cat": "core",
+      "col": "R",
+      "ord": 3,
+      "name": "RAM Slots",
+      "spec": "4 × 288-pin DDR5 DIMM",
+      "anchor": [
+        1068,
+        300
+      ],
+      "brief": "Hold the memory modules the CPU actually works out of. Programs and data are copied here from storage because RAM answers in nanoseconds where an SSD needs microseconds.",
+      "fn": "Each slot takes a 288-pin DDR5 module. An off-center notch keys the module so it seats only one way — a DDR4 stick physically cannot be forced into a DDR5 slot. The four slots are wired as two channels: A1 and A2 on one, B1 and B2 on the other.",
+      "note": "Two sticks in A2 and B2 run <b>dual channel</b>. DDR5-6000 moves about 48 GB/s per channel, so a matched pair gives roughly 96 GB/s. The same two sticks in A1 and A2 run a single channel and hand back about half of that.",
+      "chips": [
+        "288 pins per module",
+        "DDR5-6000 ≈ 48 GB/s per channel",
+        "populate A2 + B2 first"
+      ],
+      "badges": [
+        [
+          984,
+          300
+        ]
+      ]
+    },
+    {
+      "n": 3,
+      "id": "pcie",
+      "cat": "core",
+      "col": "L",
+      "ord": 5,
+      "name": "PCIe Slots",
+      "spec": "PCI Express · x16 and x1",
+      "anchor": [
+        434,
+        737
+      ],
+      "brief": "Card-edge connectors for graphics cards, capture cards and other expansion cards. Each PCIe lane is a high-speed serial link running either straight to the CPU or through the chipset.",
+      "fn": "A lane is a pair of one-way serial links, one in each direction. The reinforced top x16 slot takes its lanes directly from the CPU and is the fastest path on the board; the lower slots are fed by the chipset. The metal shroud on the top slot is there to carry the weight of a heavy graphics card.",
+      "note": "Physical length is not electrical width. A full-length x16 slot can be wired for only four lanes — the lower slot here is exactly that. The board manual, not the slot, tells you what you actually get.",
+      "chips": [
+        "PCIe 5.0 x16 ≈ 63 GB/s each way",
+        "x1 = 25 mm, x16 = 89 mm",
+        "slot length ≠ lane count"
+      ],
+      "badges": [
+        [
+          615,
+          737
+        ]
+      ]
+    },
+    {
+      "n": 4,
+      "id": "sata",
+      "cat": "core",
+      "col": "R",
+      "ord": 4,
+      "name": "SATA Ports",
+      "spec": "7-pin SATA · 6 Gb/s",
+      "anchor": [
+        1386,
+        738
+      ],
+      "brief": "Flat seven-pin connectors for 2.5-inch and 3.5-inch SSDs, spinning hard drives and optical drives. They carry data only — the drive takes its power on a separate lead from the power supply.",
+      "fn": "The L-shaped key means the cable seats only one way. These right-angle ports lie flat against the board so a case side panel still closes with cables attached. SATA is hot-plug capable, which is how a drive bay can be swapped without powering down.",
+      "note": "SATA III signals at 6 Gb/s, which after 8b/10b line encoding leaves about 600 MB/s. That is a hard ceiling for any drive on this port, and it is why an NVMe drive in an M.2 slot is roughly 25× faster.",
+      "chips": [
+        "6 Gb/s ≈ 600 MB/s",
+        "data only — power is separate",
+        "L-key, hot-plug capable"
+      ],
+      "badges": [
+        [
+          1341,
+          684
+        ],
+        [
+          1341,
+          792
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "id": "pwr",
+      "cat": "core",
+      "col": "R",
+      "ord": 2,
+      "name": "Power Connectors",
+      "spec": "24-pin ATX + 2 × 8-pin EPS12V",
+      "anchor": [
+        1376,
+        312
+      ],
+      "brief": "The board's feed from the power supply. The 24-pin ATX connector delivers +3.3 V, +5 V and +12 V to the board itself; the 8-pin EPS12V connectors feed the CPU's voltage regulator directly.",
+      "fn": "The <b>24-pin ATX</b> connector also carries two signal wires: PS_ON#, which the board pulls low to switch the supply on, and PWR_OK, which the supply raises once its rails are stable. The two <b>8-pin EPS12V</b> connectors above the socket are four grounds and four +12 V lines feeding the VRM.",
+      "note": "Each EPS contact is rated about 7 A, so four +12 V pins carry up to 28 A — roughly 336 W. That is why a high-power CPU wants both 8-pins populated, and why \"it won't POST\" so often traces back to an EPS plug nobody seated.",
+      "chips": [
+        "+3.3 V / +5 V / +12 V / +5VSB",
+        "PS_ON# and PWR_OK signals",
+        "8-pin EPS: 28 A ≈ 336 W"
+      ],
+      "badges": [
+        [
+          1341,
+          312
+        ],
+        [
+          347,
+          203
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "id": "chip",
+      "cat": "core",
+      "col": "R",
+      "ord": 7,
+      "name": "Chipset (PCH)",
+      "spec": "Platform controller hub",
+      "anchor": [
+        1190,
+        845
+      ],
+      "brief": "The board's I/O traffic controller. Most USB ports, the SATA ports, onboard networking and the spare PCIe lanes all connect here first, and the chipset funnels that traffic back to the CPU over a single link.",
+      "fn": "Anything that does not need to hang directly off the processor terminates at the chipset, which aggregates it and talks to the CPU over one high-speed link (DMI). The finned block on top is a heatsink — the die underneath is soldered to the board and is not removable.",
+      "note": "That link is <b>shared</b>. A Z890 talks to the CPU over DMI 4.0 x8, about 16 GB/s; a B860 gets x4. Run a chipset-attached NVMe drive, a USB4 enclosure and a 10 GbE card at once and they are all competing for the same pipe.",
+      "chips": [
+        "DMI 4.0 x8 ≈ 16 GB/s",
+        "Z890: 24 PCIe 4.0 lanes",
+        "sets USB / SATA port limits"
+      ],
+      "badges": [
+        [
+          1090,
+          790
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "id": "cmos",
+      "cat": "core",
+      "col": "R",
+      "ord": 5,
+      "name": "CMOS Battery",
+      "spec": "CR2032 · 3 V lithium coin cell",
+      "anchor": [
+        1252,
+        660
+      ],
+      "brief": "A lithium coin cell that trickles power to the real-time clock and the firmware's settings memory while the machine is unplugged, so the system still knows the date and its own configuration at the next cold start.",
+      "fn": "Nothing else on the board draws from this cell, which is why a single CR2032 lasts years. It is held in a spring clip so it can be levered out by hand — no tools, no soldering.",
+      "note": "A dead cell looks like a clock that resets to roughly the year 2000 every boot, firmware settings back at defaults, sometimes a POST error, and HTTPS certificate warnings caused by the wrong system time. Pulling it — or shorting the CLR_CMOS jumper — is also the standard way to clear a forgotten BIOS password.",
+      "chips": [
+        "3 V, ≈ 225 mAh",
+        "keeps the real-time clock running",
+        "2–10 year service life"
+      ],
+      "badges": [
+        [
+          1199,
+          712
+        ]
+      ]
+    },
+    {
+      "n": 8,
+      "id": "vrm",
+      "cat": "bonus",
+      "col": "L",
+      "ord": 1,
+      "name": "VRM",
+      "spec": "Voltage regulator · multi-phase buck",
+      "anchor": [
+        470,
+        388
+      ],
+      "brief": "Steps the supply's 12 V down to the roughly 1.1 V the CPU core actually runs on, at hundreds of amps, using banks of MOSFETs, chokes and capacitors under the finned heatsinks around the socket.",
+      "fn": "Each \"phase\" is a pair of MOSFETs, a choke and a capacitor switching a few hundred thousand times a second. A PWM controller staggers the phases so current is shared evenly between them and voltage ripple stays small enough for the processor to tolerate.",
+      "note": "Dropping 12 V to 1.2 V at 200 A dumps real heat — that is what the finned aluminium blocks wrapped around the socket are for. A thin VRM is what makes a budget board throttle a strong CPU.",
+      "chips": [
+        "12 V → ≈ 0.9–1.4 V",
+        "MOSFETs + chokes + capacitors",
+        "hundreds of amps"
+      ],
+      "badges": [
+        [
+          500,
+          164
+        ],
+        [
+          508,
+          388
+        ]
+      ]
+    },
+    {
+      "n": 9,
+      "id": "m2",
+      "cat": "bonus",
+      "col": "L",
+      "ord": 4,
+      "name": "M.2 Slots",
+      "spec": "M-key · 2280 · NVMe",
+      "anchor": [
+        436,
+        592
+      ],
+      "brief": "Card-edge sockets that put an NVMe SSD straight onto the PCIe bus with no cable at all — roughly 25 times the bandwidth of a SATA port.",
+      "fn": "\"M.2 2280\" is a size, not a speed: 22 mm wide, 80 mm long. The M key gives the drive four PCIe lanes and an NVMe controller talks over them directly. The aluminium covers are heatspreaders — a fast drive will thermally throttle without one.",
+      "note": "Watch the manual for lane sharing. Filling the last M.2 slot commonly disables a SATA port or drops the second PCIe slot to fewer lanes, because those lanes are being borrowed rather than added.",
+      "chips": [
+        "22 × 80 mm",
+        "PCIe 5.0 x4 ≈ 15.75 GB/s",
+        "shares lanes with other slots"
+      ],
+      "badges": [
+        [
+          600,
+          592
+        ],
+        [
+          600,
+          818
+        ],
+        [
+          600,
+          970
+        ]
+      ]
+    },
+    {
+      "n": 10,
+      "id": "bios",
+      "cat": "bonus",
+      "col": "R",
+      "ord": 6,
+      "name": "BIOS / UEFI Chip",
+      "spec": "SPI flash · 16–32 MB",
+      "anchor": [
+        1304,
+        759
+      ],
+      "brief": "A small non-volatile flash chip holding the firmware that runs before any operating system exists: it powers up and tests the hardware, trains the memory, then hands control to a bootloader on a drive.",
+      "fn": "This is the first code the machine executes. It runs POST (power-on self-test), initialises the memory controller and devices, presents the setup interface, and then locates and launches a bootloader. On UEFI boards the settings themselves are also stored in a region of this same chip.",
+      "note": "\"Flashing the BIOS\" means rewriting this chip. It is why a board can need a firmware update before it will recognise a newer CPU, and why BIOS Flashback — writing it from a USB stick with no CPU installed — exists at all.",
+      "chips": [
+        "holds the UEFI firmware",
+        "runs POST at power-on",
+        "rewritable — \"flashing\""
+      ],
+      "badges": [
+        [
+          1263,
+          759
+        ]
+      ]
+    },
+    {
+      "n": 11,
+      "id": "fan",
+      "cat": "bonus",
+      "col": "R",
+      "ord": 1,
+      "name": "Fan Headers",
+      "spec": "4-pin PWM · +12 V",
+      "anchor": [
+        1142,
+        230
+      ],
+      "brief": "Four-pin connectors that power the case and CPU fans and control their speed by PWM, while a tachometer line reports each fan's RPM back to the board.",
+      "fn": "Pin 1 is ground, pin 2 is +12 V, pin 3 is the tachometer line the fan uses to report its own speed, and pin 4 carries a 25 kHz PWM signal whose duty cycle sets that speed. The firmware ramps the fans against temperature sensors on the board.",
+      "note": "A 3-pin fan still works in a 4-pin header — the board falls back to varying the DC voltage instead. Always use CPU_FAN for the cooler: many boards halt at POST with a fan error when that header reads 0 RPM.",
+      "chips": [
+        "GND / +12 V / tach / PWM",
+        "25 kHz control signal",
+        "3-pin fans fall back to DC"
+      ],
+      "badges": [
+        [
+          1119,
+          230
+        ],
+        [
+          1201,
+          1010
+        ]
+      ]
+    },
+    {
+      "n": 12,
+      "id": "io",
+      "cat": "bonus",
+      "col": "L",
+      "ord": 2,
+      "name": "Rear I/O Panel",
+      "spec": "External port cluster",
+      "anchor": [
+        258,
+        400
+      ],
+      "brief": "The fixed block of external ports soldered to the board — USB-A and USB-C, display outputs, RJ-45 Ethernet, Wi-Fi antenna jacks and analog audio — that projects through the back of the case.",
+      "fn": "Because these connectors are soldered directly to the PCB, the panel belongs to the motherboard rather than to the case. The case simply provides a standardised rectangular opening for it, and on modern boards the shield around that opening is pre-attached at the factory.",
+      "note": "The display outputs here only work on a CPU that has integrated graphics. With a discrete graphics card installed the monitor cable belongs on the card — plugging it in here is one of the most common first-build mistakes.",
+      "chips": [
+        "USB / display / LAN / audio",
+        "158.75 × 44.45 mm opening",
+        "soldered to the board"
+      ],
+      "badges": [
+        [
+          334,
+          330
+        ]
+      ]
+    },
+    {
+      "n": 13,
+      "id": "fpanel",
+      "cat": "bonus",
+      "col": "R",
+      "ord": 8,
+      "name": "Front Panel Header",
+      "spec": "F_PANEL · switches and LEDs",
+      "anchor": [
+        1396,
+        977
+      ],
+      "brief": "The block of pins where the case's power button, reset button, power LED and drive-activity LED land, letting the controls on the front of the case talk to the board.",
+      "fn": "The buttons are momentary switches: pressing power briefly closes a circuit, and the firmware decides what that means — a short press powers on or sleeps, a long press forces a hard cut. The LED pairs are driven directly by the board.",
+      "note": "The switch pairs are not polarised but the LED pairs are — reversed, they simply never light. This header is also how a board is started on the bench: briefly bridge the two PWR_SW pins with a screwdriver.",
+      "chips": [
+        "PWR_SW / RESET / PLED / HDD_LED",
+        "LEDs are polarised",
+        "momentary switches"
+      ],
+      "badges": [
+        [
+          1340,
+          977
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    [
+      "Intel — Intel® Core™ Ultra Processors (Series 2) product brief",
+      "Socket LGA 1851 contact count, CPU PCIe 5.0 lane budget",
+      "https://www.intel.com/content/www/us/en/products/docs/processors/core-ultra/core-ultra-series-2-desktop-product-brief.html"
+    ],
+    [
+      "Puget Systems — Z890 vs. B860 vs. H810",
+      "Chipset DMI link width and downstream PCIe lane counts",
+      "https://www.pugetsystems.com/labs/articles/z890-vs-b860-vs-h810/"
+    ],
+    [
+      "JEDEC — DDR5 SDRAM standard (JESD79-5)",
+      "288-pin DIMM, dual sub-channel architecture, transfer rates",
+      "https://www.jedec.org/standards-documents/docs/jesd79-5b"
+    ],
+    [
+      "PCI-SIG — PCI Express Base Specification",
+      "Per-lane transfer rate, 128b/130b encoding, connector lengths",
+      "https://pcisig.com/specifications"
+    ],
+    [
+      "AllPinouts — EPS12V / EATX12V 8-pin",
+      "Connector pinout and per-contact current rating",
+      "https://allpinouts.org/pinouts/connectors/power_supply/eps12v-eatx12v-8-pin/"
+    ],
+    [
+      "Intel — 4-Wire Pulse Width Modulation Controlled Fans specification",
+      "25 kHz PWM control signal, tachometer output",
+      "https://www.intel.com/content/www/us/en/products/docs/processors/core/4-wire-pwm-controlled-fans-spec.html"
+    ],
+    [
+      "HP — What is a CMOS battery",
+      "Cell type, retained data, expected service life",
+      "https://www.hp.com/us-en/shop/tech-takes/what-is-cmos-battery-how-to-remove-and-replace"
+    ],
+    [
+      "SATA-IO — Serial ATA Revision 3.x",
+      "6 Gb/s signalling rate and 8b/10b encoding overhead",
+      "https://sata-io.org/developers/purchase-specification"
+    ]
+  ]
+}

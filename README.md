@@ -20,7 +20,8 @@ rear I/O panel · front panel header.
 
 The board is drawn to true ATX proportions (305 × 244 mm, 9 standoffs) as a
 composite reference layout — not a copy of any manufacturer's product. Every
-figure was checked against the primary specifications cited on plate 3.
+source cited on plate 3 was fetched and read during the build; each citation's
+middle line states only what that page actually says.
 
 ## Rebuilding
 

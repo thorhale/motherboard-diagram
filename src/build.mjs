@@ -268,11 +268,11 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
 
 .srcbox{border-top-color:var(--ink)}
 .srcbox ol{list-style:none;margin:8px 0 0;padding:0}
-.srcbox li{margin:0 0 6px;line-height:1.26;display:flex;flex-direction:column}
-.srcbox .s-n{font-size:8.2pt}
+.srcbox li{margin:0 0 4px;line-height:1.22;display:flex;flex-direction:column}
+.srcbox .s-n{font-size:7.7pt}
 .s-n{font-weight:600;color:var(--ink)}
-.s-w{color:var(--ink-2);font-size:7.6pt}
-.s-u{font-family:"IBM Plex Mono",monospace;font-size:6.2pt;color:var(--ink-3);word-break:break-all}
+.s-w{color:var(--ink-2);font-size:7.1pt}
+.s-u{font-family:"IBM Plex Mono",monospace;font-size:5.7pt;color:var(--ink-3);word-break:break-all}
 
 /* ---------- footer ---------- */
 .foot{
@@ -410,7 +410,7 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
         <div class="r-head">
           <div class="c-id">
             <h3>Sources consulted</h3>
-            <p class="c-spec">Figures checked against primary specifications</p>
+            <p class="c-spec">Each figure checked against the source beside it</p>
           </div>
         </div>
         <ol>${sources}</ol>

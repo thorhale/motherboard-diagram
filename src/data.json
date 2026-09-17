@@ -194,9 +194,9 @@
       "fn": "Nothing else on the board draws from this cell, which is why a single CR2032 lasts years. It is held in a spring clip so it can be levered out by hand — no tools, no soldering.",
       "note": "A dead cell looks like a clock that resets to roughly the year 2000 every boot, firmware settings back at defaults, sometimes a POST error, and HTTPS certificate warnings caused by the wrong system time. Pulling it — or shorting the CLR_CMOS jumper — is also the standard way to clear a forgotten BIOS password.",
       "chips": [
-        "3 V, ≈ 225 mAh",
-        "keeps the real-time clock running",
-        "2–10 year service life"
+        "3 V, 220 mAh",
+        "20 × 3.2 mm coin cell",
+        "keeps the real-time clock running"
       ],
       "badges": [
         [
@@ -386,44 +386,54 @@
   ],
   "sources": [
     [
-      "Intel — Intel® Core™ Ultra Processors (Series 2) product brief",
-      "Socket LGA 1851 contact count, CPU PCIe 5.0 lane budget",
-      "https://www.intel.com/content/www/us/en/products/docs/processors/core-ultra/core-ultra-series-2-desktop-product-brief.html"
+      "Intel — Information About Intel® Core™ Ultra Boxed Desktop Processors (Series 2)",
+      "Socket LGA 1851 with Intel 800 Series chipset",
+      "https://www.intel.com/content/www/us/en/support/articles/000099656/processors.html"
+    ],
+    [
+      "Intel — Intel® Core™ Ultra Desktop Processors (Series 2) Product Brief",
+      "Up to 20 CPU PCIe 5.0 lanes; DDR5 memory support",
+      "https://www.intel.com/content/www/us/en/products/docs/processors/core-ultra/core-ultra-desktop-processors-series-2-brief.html"
     ],
     [
       "Puget Systems — Z890 vs. B860 vs. H810",
-      "Chipset DMI link width and downstream PCIe lane counts",
+      "Z890 DMI 8×4.0 and 24 chipset PCIe 4.0 lanes; B860 DMI 4×4.0",
       "https://www.pugetsystems.com/labs/articles/z890-vs-b860-vs-h810/"
     ],
     [
-      "JEDEC — DDR5 SDRAM standard (JESD79-5)",
-      "288-pin DIMM, dual sub-channel architecture, transfer rates",
-      "https://www.jedec.org/standards-documents/docs/jesd79-5b"
-    ],
-    [
-      "PCI-SIG — PCI Express Base Specification",
-      "Per-lane transfer rate, 128b/130b encoding, connector lengths",
-      "https://pcisig.com/specifications"
-    ],
-    [
-      "AllPinouts — EPS12V / EATX12V 8-pin",
-      "Connector pinout and per-contact current rating",
+      "AllPinouts — EPS12V / EATX12V 8 pin",
+      "Four ground and four +12 V pins, each contact rated 7 A",
       "https://allpinouts.org/pinouts/connectors/power_supply/eps12v-eatx12v-8-pin/"
     ],
     [
-      "Intel — 4-Wire Pulse Width Modulation Controlled Fans specification",
-      "25 kHz PWM control signal, tachometer output",
-      "https://www.intel.com/content/www/us/en/products/docs/processors/core/4-wire-pwm-controlled-fans-spec.html"
+      "Wikipedia — ATX",
+      "305 × 244 mm board; 24-pin rails, PS_ON# and PWR_OK",
+      "https://en.wikipedia.org/wiki/ATX"
     ],
     [
-      "HP — What is a CMOS battery",
-      "Cell type, retained data, expected service life",
-      "https://www.hp.com/us-en/shop/tech-takes/what-is-cmos-battery-how-to-remove-and-replace"
+      "Wikipedia — PCI Express",
+      "32 GT/s per lane, 128b/130b, 63.0 GB/s at x16; 25 mm and 89 mm connectors",
+      "https://en.wikipedia.org/wiki/PCI_Express"
     ],
     [
-      "SATA-IO — Serial ATA Revision 3.x",
-      "6 Gb/s signalling rate and 8b/10b encoding overhead",
-      "https://sata-io.org/developers/purchase-specification"
+      "Wikipedia — SATA",
+      "6 Gbit/s signalling, 8b/10b encoding, 600 MB/s, 7-pin data connector",
+      "https://en.wikipedia.org/wiki/SATA"
+    ],
+    [
+      "Wikipedia — DDR5 SDRAM",
+      "288-pin DIMM with two independent sub-channels",
+      "https://en.wikipedia.org/wiki/DDR5_SDRAM"
+    ],
+    [
+      "Wikipedia — Computer fan control",
+      "25 kHz PWM control signal; tachometer pulses twice per revolution",
+      "https://en.wikipedia.org/wiki/Computer_fan_control"
+    ],
+    [
+      "Wikipedia — CR2032 battery",
+      "3 V lithium cell, 220 mAh, 20 × 3.2 mm",
+      "https://en.wikipedia.org/wiki/CR2032_battery"
     ]
   ]
 }

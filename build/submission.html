@@ -125,11 +125,11 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
 
 .srcbox{border-top-color:var(--ink)}
 .srcbox ol{list-style:none;margin:8px 0 0;padding:0}
-.srcbox li{margin:0 0 6px;line-height:1.26;display:flex;flex-direction:column}
-.srcbox .s-n{font-size:8.2pt}
+.srcbox li{margin:0 0 4px;line-height:1.22;display:flex;flex-direction:column}
+.srcbox .s-n{font-size:7.7pt}
 .s-n{font-weight:600;color:var(--ink)}
-.s-w{color:var(--ink-2);font-size:7.6pt}
-.s-u{font-family:"IBM Plex Mono",monospace;font-size:6.2pt;color:var(--ink-3);word-break:break-all}
+.s-w{color:var(--ink-2);font-size:7.1pt}
+.s-u{font-family:"IBM Plex Mono",monospace;font-size:5.7pt;color:var(--ink-3);word-break:break-all}
 
 /* ---------- footer ---------- */
 .foot{
@@ -1018,7 +1018,7 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
     </div>
     <p class="r-fn">Nothing else on the board draws from this cell, which is why a single CR2032 lasts years. It is held in a spring clip so it can be levered out by hand — no tools, no soldering.</p>
     <p class="r-note"><b>Why it matters — </b>A dead cell looks like a clock that resets to roughly the year 2000 every boot, firmware settings back at defaults, sometimes a POST error, and HTTPS certificate warnings caused by the wrong system time. Pulling it — or shorting the CLR_CMOS jumper — is also the standard way to clear a forgotten BIOS password.</p>
-    <ul class="r-chips"><li>3 V, ≈ 225 mAh</li><li>keeps the real-time clock running</li><li>2–10 year service life</li></ul>
+    <ul class="r-chips"><li>3 V, 220 mAh</li><li>20 × 3.2 mm coin cell</li><li>keeps the real-time clock running</li></ul>
   </article>
       <article class="inset">
         <div class="r-head" style="border:0;padding:0">
@@ -1220,18 +1220,20 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-wei
         <div class="r-head">
           <div class="c-id">
             <h3>Sources consulted</h3>
-            <p class="c-spec">Figures checked against primary specifications</p>
+            <p class="c-spec">Each figure checked against the source beside it</p>
           </div>
         </div>
         <ol>
-  <li><span class="s-n">Intel — Intel® Core™ Ultra Processors (Series 2) product brief</span><span class="s-w">Socket LGA 1851 contact count, CPU PCIe 5.0 lane budget</span><span class="s-u">https://www.intel.com/content/www/us/en/products/docs/processors/core-ultra/core-ultra-series-2-desktop-product-brief.html</span></li>
-  <li><span class="s-n">Puget Systems — Z890 vs. B860 vs. H810</span><span class="s-w">Chipset DMI link width and downstream PCIe lane counts</span><span class="s-u">https://www.pugetsystems.com/labs/articles/z890-vs-b860-vs-h810/</span></li>
-  <li><span class="s-n">JEDEC — DDR5 SDRAM standard (JESD79-5)</span><span class="s-w">288-pin DIMM, dual sub-channel architecture, transfer rates</span><span class="s-u">https://www.jedec.org/standards-documents/docs/jesd79-5b</span></li>
-  <li><span class="s-n">PCI-SIG — PCI Express Base Specification</span><span class="s-w">Per-lane transfer rate, 128b/130b encoding, connector lengths</span><span class="s-u">https://pcisig.com/specifications</span></li>
-  <li><span class="s-n">AllPinouts — EPS12V / EATX12V 8-pin</span><span class="s-w">Connector pinout and per-contact current rating</span><span class="s-u">https://allpinouts.org/pinouts/connectors/power_supply/eps12v-eatx12v-8-pin/</span></li>
-  <li><span class="s-n">Intel — 4-Wire Pulse Width Modulation Controlled Fans specification</span><span class="s-w">25 kHz PWM control signal, tachometer output</span><span class="s-u">https://www.intel.com/content/www/us/en/products/docs/processors/core/4-wire-pwm-controlled-fans-spec.html</span></li>
-  <li><span class="s-n">HP — What is a CMOS battery</span><span class="s-w">Cell type, retained data, expected service life</span><span class="s-u">https://www.hp.com/us-en/shop/tech-takes/what-is-cmos-battery-how-to-remove-and-replace</span></li>
-  <li><span class="s-n">SATA-IO — Serial ATA Revision 3.x</span><span class="s-w">6 Gb/s signalling rate and 8b/10b encoding overhead</span><span class="s-u">https://sata-io.org/developers/purchase-specification</span></li></ol>
+  <li><span class="s-n">Intel — Information About Intel® Core™ Ultra Boxed Desktop Processors (Series 2)</span><span class="s-w">Socket LGA 1851 with Intel 800 Series chipset</span><span class="s-u">https://www.intel.com/content/www/us/en/support/articles/000099656/processors.html</span></li>
+  <li><span class="s-n">Intel — Intel® Core™ Ultra Desktop Processors (Series 2) Product Brief</span><span class="s-w">Up to 20 CPU PCIe 5.0 lanes; DDR5 memory support</span><span class="s-u">https://www.intel.com/content/www/us/en/products/docs/processors/core-ultra/core-ultra-desktop-processors-series-2-brief.html</span></li>
+  <li><span class="s-n">Puget Systems — Z890 vs. B860 vs. H810</span><span class="s-w">Z890 DMI 8×4.0 and 24 chipset PCIe 4.0 lanes; B860 DMI 4×4.0</span><span class="s-u">https://www.pugetsystems.com/labs/articles/z890-vs-b860-vs-h810/</span></li>
+  <li><span class="s-n">AllPinouts — EPS12V / EATX12V 8 pin</span><span class="s-w">Four ground and four +12 V pins, each contact rated 7 A</span><span class="s-u">https://allpinouts.org/pinouts/connectors/power_supply/eps12v-eatx12v-8-pin/</span></li>
+  <li><span class="s-n">Wikipedia — ATX</span><span class="s-w">305 × 244 mm board; 24-pin rails, PS_ON# and PWR_OK</span><span class="s-u">https://en.wikipedia.org/wiki/ATX</span></li>
+  <li><span class="s-n">Wikipedia — PCI Express</span><span class="s-w">32 GT/s per lane, 128b/130b, 63.0 GB/s at x16; 25 mm and 89 mm connectors</span><span class="s-u">https://en.wikipedia.org/wiki/PCI_Express</span></li>
+  <li><span class="s-n">Wikipedia — SATA</span><span class="s-w">6 Gbit/s signalling, 8b/10b encoding, 600 MB/s, 7-pin data connector</span><span class="s-u">https://en.wikipedia.org/wiki/SATA</span></li>
+  <li><span class="s-n">Wikipedia — DDR5 SDRAM</span><span class="s-w">288-pin DIMM with two independent sub-channels</span><span class="s-u">https://en.wikipedia.org/wiki/DDR5_SDRAM</span></li>
+  <li><span class="s-n">Wikipedia — Computer fan control</span><span class="s-w">25 kHz PWM control signal; tachometer pulses twice per revolution</span><span class="s-u">https://en.wikipedia.org/wiki/Computer_fan_control</span></li>
+  <li><span class="s-n">Wikipedia — CR2032 battery</span><span class="s-w">3 V lithium cell, 220 mAh, 20 × 3.2 mm</span><span class="s-u">https://en.wikipedia.org/wiki/CR2032_battery</span></li></ol>
       </article>
     </div>
   </div>

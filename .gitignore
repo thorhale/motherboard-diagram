@@ -1,2 +1,7 @@
 build/proof-*.png
+build/_*.html
+build/i-*.png
+build/prev-*.png
+build/zoom.png
+build/titleblock.png
 node_modules/
